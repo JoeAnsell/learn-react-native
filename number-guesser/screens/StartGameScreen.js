@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, TextInput, StyleSheet, Alert } from "react-native";
-import PrimaryButton from "../components/game/ui/PrimaryButton";
+import PrimaryButton from "../components/ui/PrimaryButton";
 import { disableErrorHandling } from "expo";
 import Colors from "../constants/colors";
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import Title from "../components/title";
+import Title from "../components/ui/Title";
 
 function generateRandomBetween(min, max, exclude) {
   const rndNum = Math.floor(Math.random() * (max - min)) + min;
@@ -35,14 +35,5 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 24,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "#ddb52f",
-    textAlign: "center",
-    borderWidth: 2,
-    borderColor: "#ddb52f",
-    padding: 12,
   },
 });
