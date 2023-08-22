@@ -11,7 +11,7 @@ export default function App() {
   const Drawer = createDrawerNavigator();
   return (
     <>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
