@@ -1,18 +1,18 @@
-import { View, FlatList, StyleSheet, Text } from "react-native";
+import { StyleSheet } from "react-native";
+import { useContext } from "react";
 import Colors from "../constants/colors";
 import ExpensesOutput from "../components/ExpensesOutput/ExpensesOutput";
+import { ExpensesContext } from "../store/expenses-context";
 
 function AllExpenses({ navigation }) {
-  return <ExpensesOutput expensesPeriod="Total" />;
+  const expensesCtx = useContext(ExpensesContext);
+  return (
+    <ExpensesOutput
+      expenses={expensesCtx.expenses}
+      expensesPeriod="Total"
+      fallBackText={"No registered expenses found!"}
+    />
+  );
 }
 
 export default AllExpenses;
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    backgroundColor: Colors.primary600,
-    height: "100%",
-    width: "100%",
-  },
-});
