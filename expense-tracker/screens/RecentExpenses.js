@@ -10,7 +10,7 @@ function RecentExpenses({ navigation }) {
 
   const recentExpenses = expensesCtx.expenses.filter((expense) => {
     const today = new Date();
-    const date7DaysAgo = getDateMinusDays(today, 15);
+    const date7DaysAgo = getDateMinusDays(today, 100);
 
     return expense.date > date7DaysAgo;
   });

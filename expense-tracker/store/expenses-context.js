@@ -11,7 +11,7 @@ const DUMMY_EXPENSES = [
     id: "e2",
     description: "Boiled egg",
     amount: 89.99,
-    date: new Date("2023-08-10"),
+    date: new Date("2023-09-06"),
   },
   {
     id: "e3",
