@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, Alert } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Input from "./Input";
 import Button from "../UI/Button";
 import { getFormattedDate } from "../../util/date";
@@ -30,6 +30,10 @@ function ExpenseForm({ onCancel, onSubmit, submitButtonLabel, defaultValues }) {
     });
   }
 
+  useEffect(() => {
+    console.log(inputs);
+  }, [inputs]);
+
   function submitHandler() {
     const expenseData = {
       amount: +inputs.amount.value,
@@ -37,7 +41,7 @@ function ExpenseForm({ onCancel, onSubmit, submitButtonLabel, defaultValues }) {
       description: inputs.description.value,
     };
 
-    const amountIsValid = !isNaN(expenseData) && expenseData.amount > 0;
+    const amountIsValid = !isNaN(expenseData.amount) && expenseData.amount > 0;
     const dateIsValid = expenseData.date.toString() !== "Invalid Date";
     const descriptionIsValid = expenseData.description.trim().length > 0;
 
