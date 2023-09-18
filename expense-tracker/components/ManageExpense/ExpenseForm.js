@@ -30,10 +30,6 @@ function ExpenseForm({ onCancel, onSubmit, submitButtonLabel, defaultValues }) {
     });
   }
 
-  useEffect(() => {
-    console.log(inputs);
-  }, [inputs]);
-
   function submitHandler() {
     const expenseData = {
       amount: +inputs.amount.value,

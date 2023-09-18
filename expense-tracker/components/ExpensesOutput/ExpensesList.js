@@ -6,7 +6,6 @@ function renderExpenseItem(itemData) {
 }
 
 function ExpensesList({ expenses }) {
-  //   console.log(expenses);
   return (
     <FlatList
       data={expenses}
