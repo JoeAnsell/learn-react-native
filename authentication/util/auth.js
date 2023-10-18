@@ -13,7 +13,6 @@ async function authenticate(mode, email, password) {
 
   const token = response.data.idToken;
 
-  console.log(response.data);
   return token;
 }
 

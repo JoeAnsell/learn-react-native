@@ -16,15 +16,14 @@ function LoginScreen() {
     try {
       setIsAuthenticating(true);
       const token = await login(email, password);
-      console.log("token=======", token);
       authCtx.authenticate(token);
     } catch (error) {
       Alert.alert(
         "Authentication failed!",
         "Could not log you in. Please check your credfientials or try again later!"
       );
+      setIsAuthenticating(false);
     }
-    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {
